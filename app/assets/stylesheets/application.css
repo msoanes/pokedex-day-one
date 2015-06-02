@@ -1,0 +1,181 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	padding: 20px;
+	height: 100%;
+	/*background-image: url(pokemon_bg.jpg);*/
+  background-color: lightgray;
+	background-position: center center;
+	background-size: cover;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+ul {
+  padding-left;
+  list-style: none;
+}
+
+#pokedex {
+	background-color: white;
+	padding: 10px;
+	height: 100%;
+}
+
+#pokedex > * {
+	height: 100%;
+	width: 33%;
+	border: thin solid black;
+	overflow: auto;
+  border-left-width: 0;
+  float: left;
+}
+
+#pokedex > *:first-child {
+  border-left-width: thin;
+}
+
+.poke-list-item, .toy-list-item {
+	border: 0 solid red;
+	padding: 10px;
+	cursor: pointer;
+  border-top: thin;
+  border-style: solid;
+  border-color: red;
+}
+
+.pokemon-list, .toys {
+  border: thin solid red;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.poke-list-item:first-child, .toy-list-item:first-child {
+  border-top: 0;
+}
+
+.poke-list-item:hover, .toy-list-item:hover {
+	background-color: tomato;
+	color: white;
+}
+
+.new-pokemon > div {
+  margin-bottom: 4px;
+}
+
+.new-pokemon label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+.new-pokemon input {
+  display: inline-block;
+}
+
+.new-pokemon, .detail {
+  padding: 10px;
+  position: relative;
+  /*border: thick black solid;*/
+}
+
+.flavor {
+  font-size: .7em;
+  color: darkgrey;
+  margin-left: 100px;
+}
+
+.detail:after {
+  content: '';
+  clear:both;
+  display:block;
+}
+
+.new-pokemon button {
+  padding: 5px;
+  border: 0;
+  color: white;
+  background-color: tomato;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 104px;
+  width: 50%;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.new-pokemon button:hover {
+  background: #f44;
+}
+
+.new-pokemon button:focus {
+  outline-style: none;
+}
+
+.toy {
+  border: thin solid tomato;
+  padding: 4px;
+  border-radius: 2px;
+  margin: 2px;
+}
+.toy:hover {
+  cursor: pointer;
+}
+
+.pokemon-detail {
+  transition: opacity 1s;
+  opacity: 100%;
+}
+
+.pokemon-detail.transparent {
+  transition: opacity 1s;
+  opacity: 0;
+  display: block;
+}
+
+.detail img {
+  /*float: left;*/
+  margin: auto;
+  display: block;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.detail select {
+
+  display: block;
+  margin: auto;
+  font-size: 24px;
+}
+
+input, select {
+  font-size: 16px;
+  width: 50%;
+}
+
+label {
+  font-size: 18px;
+}
